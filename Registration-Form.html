@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registeration Form</title>
+	<style>
+
+		*{
+			background-color: skyblue;
+		}
+		.head {
+			text-align: center;
+		}
+		hr {
+		width: 80%;
+		margin-left: 5%;
+		height: 5px;
+		background-color: white
+		}
+		.menu {
+			padding-top: 20px;
+			padding-left: 200px;	
+		}
+		textarea {
+			width: 90%;
+			height: 105px;
+			background-color: #fff
+		}
+		input {
+			  width: 90%;
+			  padding: 12px 20px;
+			  margin-bottom: 8px;
+			  border: 1px solid #ccc;
+			  border-radius: 4px;
+			  box-sizing: border-box;
+			  background-color: #fff
+		}
+		input[type='radio'] {
+			width: auto;
+		}
+		select {
+			background-color: white;
+			width: 20%;
+			height: 30px;
+			margin-bottom: 8px;
+
+		}
+	</style>
+
+
+	
+</head>
+<body>
+	<div class="Registeration">
+	<div class="head">
+		<h1>Student Registeration Form</h1>
+	</div>
+	<hr>
+	<div class="menu">
+		<form action="/example.php" method="post">
+			Firstname:<br>
+			<input type="text" name="firstname" placeholder="Firstname" required /><br>
+			Middlename:<br>
+			<input required type="text" name="middlename" placeholder="Middlename" /><br>
+			Lastname:<br>
+			<input required type="text" name="lastname" placeholder="Lastname" /><br>
+		Course:<br>
+		<select type="inp" name="course" required>
+			<option value="">Course</option>
+			<option value="java">Java</option>
+			<option value="python">Python</option>
+			<option value="html">HTML</option>
+		</select><br>
+		Gender:<br>
+			<input type="radio" name="gender" value="Male" checked />Male
+			<input type="radio" name="gender" value="Female" />Female
+			<input type="radio" name="gender" value="Other" />Other<br>
+
+		Phone:<br>
+		<input required type="tel" pattern="07[0-9]{8}" name="Phone" placeholder="07xxxxxxxx" title="07xxxxxxxx" /><br>
+		<input required type="tel" pattern="07[0-9]{8}" name="Phone" placeholder="Phone no" title="07xxxxxxxx" /><br>
+
+		Current Address:<br>
+		<textarea placeholder="Current-Address"></textarea><br>
+		Email:<br>
+		<input required type="email" name="Email" placeholder="Enter Email" /><br>
+
+		Password:<br>
+		<input 
+		required 
+		type="password" 
+		name="password" 
+		placeholder="Enter Password"
+		pattern="(?=(?:[^a-zA-Z]*[a-zA-Z]){5})(?=(?:\D*\d){2})(?=.*[@#$%&]).*" 
+		 /><br>
+
+		Re-type Password:<br>
+		<input 
+		required 
+		type="password" 
+		name="Password" 
+		placeholder="Re-type Password"
+		pattern="(?=(?:[^a-zA-Z]*[a-zA-Z]){5})(?=(?:\D*\d){2})(?=.*[@#$%&]).*"
+		 /><br>
+
+		<input type="submit" name="submit" value="Register" style="background-color: green" />
+	</div>
+	</div>
+	</form>
+</body>
+</html>
